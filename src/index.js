@@ -40,7 +40,7 @@ const windowState = (BaseComponent) =>
     }
 
     render() {
-      return <BaseComponent {...this.state} />;
+      return <BaseComponent {...this.state} {...this.props} />;
     }
   };
 
