@@ -1,0 +1,41 @@
+{
+  "name": "react-window-state-example",
+  "version": "1.0.0",
+  "description": "react-window-state-example-description",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chentsulin/react-window-state.git"
+  },
+  "keywords": [
+    "react-window-state-keywords"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chentsulin/react-window-state/issues"
+  },
+  "homepage": "https://github.com/chentsulin/react-window-state",
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.2",
+    "babel-eslint": "^5.0.0",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "express": "^4.13.4",
+    "webpack": "^1.12.9",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.7.1"
+  }
+}
