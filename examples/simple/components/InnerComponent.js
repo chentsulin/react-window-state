@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 
 class InnerComponent extends Component {
   render() {
-    console.log(111);
     const { window: win, document: doc } = this.props;
     return (
       <div>
