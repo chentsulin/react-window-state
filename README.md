@@ -22,9 +22,23 @@ var windowState = require('react-window-state');
 
 const WrappedComponent = windowState(BaseComponent);
 
-...
-render() {
-  return <WrappedComponent />;
+class App extends Component {
+	render() {
+  	return <WrappedComponent />;
+	}
+}
+
+class BaseComponent extends Component {
+	render() {
+	  // retrieve updated window, document state from props
+		const { window: win, document: doc } = this.props;
+    return (
+      <div>
+        <p>window - width: {win.width}, height: {win.height}</p>
+        <p>document - width: {doc.width}, height: {doc.height}</p>
+      </div>
+    );
+  }
 }
 ```
 
