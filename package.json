@@ -34,7 +34,12 @@
     "index.js"
   ],
   "keywords": [
-    ""
+    "react",
+    "window",
+    "document",
+    "state",
+    "width",
+    "height"
   ],
   "devDependencies": {
     "babel": "^6.5.2",
