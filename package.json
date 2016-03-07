@@ -8,7 +8,7 @@
   "scripts": {
     "clean": "rimraf lib dist coverage",
     "lint": "eslint src test examples",
-    "test": "mocha --compilers js:babel-register --recursive",
+    "test": "mocha --compilers js:babel-register --recursive --require ./test/setup.js",
     "test:watch": "npm test -- --watch",
     "test:cov": "babel-node $(npm bin)/isparta cover $(npm bin)/_mocha -- --recursive",
     "check": "npm run lint && npm run test ",
@@ -61,6 +61,8 @@
     "react": "^0.14.7"
   },
   "dependencies": {
+    "babel-polyfill": "^6.6.1",
+    "jsdom": "^7.2.2",
     "lodash": "^4.5.1"
   }
 }
