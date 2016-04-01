@@ -5,7 +5,7 @@
 [![Test coverage][coveralls-image]][coveralls-url]
 [![Dependency Status][david_img]][david_site]
 
-> Pass updated window width and height as props on resize
+> Pass updated window width and height as props on resize. Highly inspired by [react-window-mixin](https://github.com/szymonkaliski/react-window-mixins).
 
 
 ## Install
