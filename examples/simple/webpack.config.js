@@ -1,3 +1,5 @@
+/* eslint no-var: 0 */
+
 var path = require('path');
 var webpack = require('webpack');
 
@@ -31,6 +33,6 @@ module.exports = {
       test: /\.js$/,
       loaders: ['babel'],
       exclude: /node_modules/,
-    }]
-  }
+    }],
+  },
 };
