@@ -11,5 +11,8 @@
   },
   "plugins": [
     "react"
-  ]
+  ],
+  "settings": {
+    "import/resolver": "webpack"
+  }
 }
