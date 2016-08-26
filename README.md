@@ -44,13 +44,19 @@ class BaseComponent extends Component {
 
 ## API
 
-### withWindowState(BaseComponent)
+### withWindowState(BaseComponent, options)
 
 #### BaseComponent
 
 *Required*
 Type: `ReactComponent`
 
+#### options.wait
+
+*Optional*
+Type: `number`
+Default: `10`
+The number of milliseconds to throttle invocations to.
 
 ## License
 

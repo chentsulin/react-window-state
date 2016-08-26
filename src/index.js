@@ -3,7 +3,7 @@ import throttle from 'lodash.throttle';
 
 const RESIZE = 'resize';
 
-export const withWindowState = (BaseComponent) =>
+export const withWindowState = (BaseComponent, { wait } = { wait: 10 }) =>
   class extends Component {
     constructor(props, context) {
       super(props, context);
@@ -31,7 +31,7 @@ export const withWindowState = (BaseComponent) =>
 
     componentDidMount() {
       this.onResize();
-      this.onResizeThrottled = throttle(this.onResize, 10);
+      this.onResizeThrottled = throttle(this.onResize, wait);
       window.addEventListener(RESIZE, this.onResizeThrottled);
     }
 
