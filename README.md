@@ -31,7 +31,7 @@ class App extends Component {
 class BaseComponent extends Component {
   render() {
     // retrieve updated window, document state from props
-    const { window: win, document: doc } = this.props;
+    const { win, doc } = this.props;
     return (
       <div>
         <p>window - width: {win.width}, height: {win.height}</p>
