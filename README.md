@@ -49,13 +49,17 @@ class BaseComponent extends Component {
 #### BaseComponent
 
 *Required*
+
 Type: `ReactComponent`
 
 #### options.wait
 
 *Optional*
+
 Type: `number`
+
 Default: `10`
+
 The number of milliseconds to throttle invocations to.
 
 ## License
