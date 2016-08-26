@@ -39,8 +39,8 @@ describe('withWindowState', () => {
 
   it('should all be 0 when component did mount', () => {
     const { output } = setup();
-    expect(output.props.window).to.deep.equal({ height: 0, width: 0 });
-    expect(output.props.document).to.deep.equal({ height: 0, width: 0 });
+    expect(output.props.win).to.deep.equal({ height: 0, width: 0 });
+    expect(output.props.doc).to.deep.equal({ height: 0, width: 0 });
   });
 
   it('should change state when resize event be triggered', (done) => {
@@ -51,8 +51,8 @@ describe('withWindowState', () => {
     const WrappedComponent = withWindowState(InnerComponent);
     const component = renderIntoDocument(<WrappedComponent />);
     window.addEventListener('resize', () => {
-      expect(component.state.window).to.deep.equal({ height: 753, width: 1403 });
-      expect(component.state.document).to.deep.equal({ height: 5624, width: 1403 });
+      expect(component.state.win).to.deep.equal({ height: 753, width: 1403 });
+      expect(component.state.doc).to.deep.equal({ height: 5624, width: 1403 });
       done();
     });
     const { Event } = window;

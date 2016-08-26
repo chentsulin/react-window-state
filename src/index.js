@@ -8,8 +8,8 @@ export const withWindowState = (BaseComponent) =>
     constructor(props, context) {
       super(props, context);
       this.state = {
-        window: { height: 0, width: 0 },
-        document: { height: 0, width: 0 },
+        win: { height: 0, width: 0 },
+        doc: { height: 0, width: 0 },
       };
     }
 
@@ -18,11 +18,11 @@ export const withWindowState = (BaseComponent) =>
       const doc = document;
       const body = doc.getElementsByTagName('body')[0];
       this.setState({
-        window: {
+        win: {
           height: win.innerHeight,
           width: win.innerWidth,
         },
-        document: {
+        doc: {
           height: body.clientHeight,
           width: body.clientWidth,
         },

@@ -3,18 +3,18 @@ import React, { Component, PropTypes } from 'react';
 
 class InnerComponent extends Component {
   static propTypes = {
-    window: PropTypes.shape({
+    win: PropTypes.shape({
       height: PropTypes.number.isRequired,
       width: PropTypes.number.isRequired,
     }).isRequired,
-    document: PropTypes.shape({
+    doc: PropTypes.shape({
       height: PropTypes.number.isRequired,
       width: PropTypes.number.isRequired,
     }).isRequired,
   };
 
   render() {
-    const { window: win, document: doc } = this.props;
+    const { win, doc } = this.props;
     return (
       <div>
         <div>
