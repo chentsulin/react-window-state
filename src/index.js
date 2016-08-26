@@ -3,7 +3,7 @@ import throttle from 'lodash.throttle';
 
 const RESIZE = 'resize';
 
-const windowState = (BaseComponent) =>
+export const withWindowState = (BaseComponent) =>
   class extends Component {
     constructor(props, context) {
       super(props, context);
@@ -43,5 +43,3 @@ const windowState = (BaseComponent) =>
       return <BaseComponent {...this.state} {...this.props} />;
     }
   };
-
-export default windowState;

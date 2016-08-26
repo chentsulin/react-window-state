@@ -4,7 +4,7 @@ import {
   createRenderer,
   renderIntoDocument,
 } from 'react-addons-test-utils';
-import windowState from '../src';
+import { withWindowState } from '../src';
 
 
 class InnerComponent extends Component {
@@ -16,7 +16,7 @@ class InnerComponent extends Component {
 function setup(props = {}) {
   const renderer = createRenderer();
 
-  const WrappedComponent = windowState(InnerComponent);
+  const WrappedComponent = withWindowState(InnerComponent);
 
   renderer.render(
     <WrappedComponent {...props} />
@@ -31,7 +31,7 @@ function setup(props = {}) {
   };
 }
 
-describe('windowState', () => {
+describe('withWindowState', () => {
   it('should render inner component', () => {
     const { output } = setup();
     expect(output.type).to.equal(InnerComponent);
@@ -48,7 +48,7 @@ describe('windowState', () => {
     window.innerWidth = 1403;
     document.body.clientHeight = 5624;
     document.body.clientWidth = 1403;
-    const WrappedComponent = windowState(InnerComponent);
+    const WrappedComponent = withWindowState(InnerComponent);
     const component = renderIntoDocument(<WrappedComponent />);
     window.addEventListener('resize', () => {
       expect(component.state.window).to.deep.equal({ height: 753, width: 1403 });

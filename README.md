@@ -18,9 +18,9 @@ $ npm install react-window-state
 ## Usage
 
 ```js
-var windowState = require('react-window-state');
+import { withWindowState } from 'react-window-state';
 
-const WrappedComponent = windowState(BaseComponent);
+const WrappedComponent = withWindowState(BaseComponent);
 
 class App extends Component {
   render() {
@@ -44,7 +44,7 @@ class BaseComponent extends Component {
 
 ## API
 
-### windowState(BaseComponent)
+### withWindowState(BaseComponent)
 
 #### BaseComponent
 
