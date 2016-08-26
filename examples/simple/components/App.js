@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import windowState from 'react-window-state';
+import { withWindowState } from 'react-window-state';
 import InnerComponent from './InnerComponent';
 
 
 class App extends Component {
   render() {
-    const OuterComponent = windowState(InnerComponent);
+    const OuterComponent = withWindowState(InnerComponent);
     return (
       <div>
         <OuterComponent />
